@@ -1,0 +1,17 @@
+.row {
+    max-width: $grid-width;
+    background-color: #eee;
+
+    // this is a trick to center elements within a block 
+    // element - auto will let the browser define the left 
+    // and right margins
+    margin: 0 auto;
+
+    &:not(:last-child) {
+        margin-bottom: $gutter-vertical;
+    }
+
+    .col-1-of-2 {
+        
+    }
+}

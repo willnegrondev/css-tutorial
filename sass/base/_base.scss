@@ -1,0 +1,17 @@
+/* basic reset to help overwrite browser CSS */
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    /* this is a percent of the root font size (16px), aiming for 10px */
+    font-size: 62.5%;
+}
+
+body {
+    box-sizing: border-box;
+}
