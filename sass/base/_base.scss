@@ -5,7 +5,7 @@
     margin: 0;
     padding: 0;
     box-sizing: inherit;
-    //border: 1px solid #000000;
+    border: 1px solid #000000;
 }
 
 html {
@@ -15,4 +15,9 @@ html {
 
 body {
     box-sizing: border-box;
+}
+
+input {
+    font-family: inherit;
+    color:inherit;
 }
