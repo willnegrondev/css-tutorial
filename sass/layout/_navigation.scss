@@ -13,6 +13,8 @@
         border-radius: 50%;
         z-index: 2000;
         box-shadow: 0 1rem 3rem rgba($color: $color-black, $alpha: .1);
+        text-align: center;
+        cursor: pointer;
     }
 
     &__background {
@@ -80,6 +82,7 @@
 
     }
 
+    // FUNCTIONALITY
     &__checkbox:checked ~ &__nav{
         opacity: 1;
         width: 100%;
@@ -88,6 +91,50 @@
     &__checkbox:checked ~ &__background {
         transform: scale(100);
 
+    }
+
+    // ICON
+    &__icon {
+
+        position: relative;
+        margin-top: 3.5rem;
+
+        &,
+        &:before,
+        &:after {
+            width: 3rem;
+            height: 2px;
+            background-color: $color-grey-dark-3;
+            display: inline-block;
+            transition: all .2s;
+        }
+
+        &:before,
+        &:after {
+            content: "";
+            position: absolute;
+            left: 0;
+        }
+
+        &:before { top: -.8rem; }
+        &:after { top: .8rem; }
+    }
+
+    &__button:hover > &__icon {
+        &:before { top: -1.2rem; }
+        &:after { top: 1.2rem; }
+    }
+
+    &__checkbox:checked + &__button &__icon {
+        background-color: transparent;
+        &:before {
+            top: 0;
+            transform: rotate(135deg);
+        }
+        &:after {
+            top: 0;
+            transform: rotate(225deg);
+        }
     }
 
 }
