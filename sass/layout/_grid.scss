@@ -8,6 +8,14 @@
 
     &:not(:last-child) {
         margin-bottom: $gutter-vertical;
+
+        @include media-query(tab-portrait){
+            margin-bottom: $gutter-vertical-small;
+        }
+    }
+
+    @include media-query(tab-portrait){
+        max-width: 50rem;
     }
 
     @include clearfix;
@@ -17,6 +25,15 @@
 
         &:not(:last-child) {
             margin-right: $gutter-horizontal;
+
+            @include media-query(tab-portrait){
+                margin-right: 0;
+                margin-bottom: $gutter-vertical-small;
+            }
+        }
+
+        @include media-query(tab-portrait){
+            width: 100% !important;
         }
     }
 

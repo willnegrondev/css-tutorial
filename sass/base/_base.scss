@@ -11,11 +11,26 @@
 html {
     /* this is a percent of the root font size (16px), aiming for 10px */
     font-size: 62.5%;
+
+    @include media-query(big-desktop){
+        font-size: 75%; // 1rem = 12px
+    }
+    @include media-query(tab-landscape){
+        font-size: 56.25%; // 1rem = 9px
+    }
+    @include media-query(tab-portrait){
+        font-size: 50%; // 1rem = 8px
+    }
 }
 
 body {
     box-sizing: border-box;
     position: relative;
+    padding: 3rem;
+
+    @include media-query(tab-portrait){
+        padding: 0;
+    }
 }
 
 input {
