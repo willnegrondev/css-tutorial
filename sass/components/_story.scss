@@ -9,6 +9,15 @@
     font-size: $default-font-size;
     transform: skewX(-12deg);
 
+    @include media-query(tab-portrait) {
+        width: 100%;
+        padding: 4rem 4rem 4rem 7rem;
+    }
+
+    @include media-query(phone) {
+        transform: skewX(0);
+    }
+
     &__shape {
         width: 15rem;
         height: 15rem;
@@ -19,6 +28,10 @@
         clip-path: $circle;
         transform: translateX(-3rem) skewX(12deg);
         position: relative;
+
+        @include media-query(phone) {
+            transform: translateX(-3rem) skewX(0);
+        }
     }
 
     &__img {
@@ -29,6 +42,9 @@
 
     &__text {
         transform: skewX(12deg);
+        @include media-query(phone) {
+            transform: skewX(0);
+        }
     }
 
     &__caption {

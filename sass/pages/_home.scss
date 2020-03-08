@@ -66,12 +66,35 @@
         transparent 50%
         ), url(../img/nat-10.jpg);
     background-size: cover;
-    height: 50rem;
     border-radius: $border-radius-small;
     box-shadow: 0 1.5rem 4rem rgba($color-black, .35);
+
+    @include media-query(tab-landscape) {
+        background-image: linear-gradient(
+        105deg,
+        rgba($color-white, .9) 0%,
+        rgba($color-white, .9) 65%,
+        transparent 65%
+        ), url(../img/nat-10.jpg);
+    }
+
+    @include media-query(tab-portrait) {
+        background-image: linear-gradient(to right,
+        rgba($color-white, .9) 0%,
+        rgba($color-white, .9) 100%
+        ), url(../img/nat-10.jpg);
+    }
 
     &__form {
         width: 50%;
         padding: 6rem;
+
+        @include media-query(tab-landscape) {
+            width: 65%;
+        }
+
+        @include media-query(tab-portrait) {
+            width: 100%;
+        }
     }
 }
