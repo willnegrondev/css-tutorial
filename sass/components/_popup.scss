@@ -29,7 +29,12 @@
         overflow: hidden;
         opacity: 0;
         transition: all .5s .2s;
-        transform: translate(-50%, -50%) scale(0.25)
+        transform: translate(-50%, -50%) scale(0.25);
+
+        @include media-query(phone) {
+            width: 90%;
+            height: auto;
+        }
     }
 
     &:target &__content {
@@ -58,20 +63,47 @@
     }
 
     &__left {
-        width: 33.33333333%;
+        width: 40%;
         display: table-cell;
+
+        @include media-query(tab-landscape) {
+            display: block;
+            width: auto;
+            text-align: center;
+            height: auto;
+        }
+
+        @include media-query(phone) {
+            display: none;
+        }
     }
 
     &__right {
-        width: 66.6666666;
+        width: 60%;
         display: table-cell;
         vertical-align: middle;
         padding: 3rem 5rem;
+
+        @include media-query(tab-landscape) {
+            display: block;
+            width: 100%;
+        }
+
     }
 
     &__img {
         display: block;
         width: 100%;
+
+        @include media-query(tab-landscape) {
+            top: 0;
+            display: inline;
+            max-width: 49%;
+            height: 90%;
+            object-fit: contain;
+            transform: scale(1.1);
+            overflow: hidden;
+        }
     }
 
     &__text {
@@ -85,5 +117,9 @@
         -ms-hyphens: auto;
         -webkit-hyphens: auto;
         hyphens: auto;
+
+        @include media-query(phone) {
+            column-count: 1;
+        }
     }
 }
