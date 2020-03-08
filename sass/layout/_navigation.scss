@@ -15,6 +15,15 @@
         box-shadow: 0 1rem 3rem rgba($color: $color-black, $alpha: .1);
         text-align: center;
         cursor: pointer;
+
+        @include media-query(tab-portrait) {
+            top: 4rem;
+            right: 4rem
+        }
+        @include media-query(phone) {
+            top: 3rem;
+            right: 3rem
+        }
     }
 
     &__background {
@@ -28,7 +37,15 @@
         z-index: 1000;
         transition: transform .8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 
-        //transform: scale(100);
+        @include media-query(tab-portrait) {
+            top: 4.5rem;
+            right: 4.5rem
+        }
+
+        @include media-query(phone) {
+            top: 3.5rem;
+            right: 3.5rem
+        }
     }
 
     &__nav {

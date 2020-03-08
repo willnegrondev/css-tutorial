@@ -8,6 +8,10 @@
     box-shadow: 0 1.5rem 4rem rgba($color-black, .15);
     transition: transform .3s;
 
+    @include media-query(tab-portrait) {
+        padding: 2rem;
+    }
+
     // feature-box__icon
     &__icon {
         font-size: 6rem;
@@ -16,6 +20,10 @@
         background-image: linear-gradient(to right, $color-primary-light, $color-primary-dark);
         -webkit-background-clip: text;
         color: transparent;
+
+        @include media-query(tab-portrait) {
+            margin: 0;
+        }
     }
 
     &:hover {
